@@ -1,0 +1,5 @@
+### Vim related:
+*.swp
+*.swo
+### Personal backup files:
+*.BAK
