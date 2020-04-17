@@ -3,3 +3,5 @@
 *.swo
 ### Personal backup files:
 *.BAK
+### Personal Todo file:
+*.TODO
