@@ -1,0 +1,10 @@
+Let p and q be two points,
+p dominates q if and only if:
+	1) ∀t ∈ T  : d(p,t) <= d(q,t)
+	2) ∃t' ∈ T : d(p,t') < d(q,t')
+		(with T the set of terminals)
+
+This property is denoted as: 
+	p≻Tq (with T as subscript of the operator)
+		or simply:
+	p≻q
