@@ -1,0 +1,14 @@
+1,3
+3,2
+2,0
+0,1
+# The Pareto envelope  of these points is like: 
+#  X
+#  |_ _X
+#X_|_|
+#    |
+#O   X
+#
+#      "O"    : The origin <==> (0,0), 
+#      "X"    : A point, 
+#  "-" and "|": The edges.
