@@ -1,0 +1,56 @@
+###########################################################################
+[1] -M.Benkert, A.Wolff, F.Widmann, and T.Shirabe,
+    -The minimum Manhattan network problem:approximations and exact solutions,
+    -Comput.Geom.35 (2006) 188–208
+pdf: https://www.sciencedirect.com/science/article/pii/S0925772105000933
+
+###########################################################################
+[2] -N.Catusse, V.Chepoi, K.Nouioua, and Y.Vax`es,
+    -Minimum Manhattan network problem in normedplanes with polygonal balls: 
+     a factor 2.5 approximation algorithm,
+    -Algorithmica 63 (2012) 551–567.
+abstract: https://arxiv.org/abs/1004.5517
+pdf:      https://arxiv.org/pdf/1004.5517.pdf
+
+###########################################################################
+[3] -V. Chepoi, K. Nouioua, and Y. Vax`es,
+    -A rounding algorithm for approximating minimum Manhat-tan networks, 
+    -Theor. Comput. Sci. 390 (2008), 56–69 and APPROX-RANDOM 2005, pp. 40–51.
+abstract: https://www.sciencedirect.com/science/article/pii/S0304397507007657
+pdf     : Check in the link the "Download full text pdf" field.
+
+###########################################################################
+[4] -M.Benkert, A.Wolff, F.Widmann, and T.Shirabe 
+    -The minimum Manhattan network problem:approximations and exact solutions,
+    -Comput.Geom.35 (2006) 188–208.
+https://link.springer.com/content/pdf/10.1007/s00454-011-9342-z.pdf
+
+###########################################################################
+[5] -A.Das, K.Fleszar, S.G.Kobourov, J.Spoerhase, S.Veeramoni, A.Wolff,
+    -Approximating thegeneralized minimum Manhattan network problem,
+    -Algorithmica 80 (2018), 1170-1190.
+abstract: https://link.springer.com/article/10.1007/s00453-017-0298-0
+
+###########################################################################
+[6] -A.Das, E.R.Gansner, M.Kaufmann, S.G.Kobourov, J.Spoerhase, A.Wolff,
+    -Approximatingminimum Manhattan networks in higher dimensions,
+    -Algorithmica 71 (2015), 36–52.
+abstract : https://link.springer.com/chapter/10.1007/978-3-642-23719-5_5
+
+###########################################################################
+[7] -J.Gudmundsson, C.Levcopoulos, and G.Narasimhan,
+    -Approximating a minimum Manhattan net-work.
+    -Theor.Comput.Sci.390 (2008), 56–69 and APPROX-RANDOM 2005, pp.40–51.
+https://core.ac.uk/download/pdf/82701447.pdf
+
+###########################################################################
+[8] -K.Nouioua, 
+    -Enveloppes de Pareto et Reseaux de Manhattan: 
+     caracterisations et algorithmes, 
+    -Th`esede Doctorat en Informatique, Universit ́e de la M ́editerran ́ee, 2005.
+personal page : http://pageperso.lif.univ-mrs.fr/~karim.nouioua/
+pdf :http://pageperso.lif.univ-mrs.fr/~karim.nouioua/download/THESE_NOUIOUA.pdf
+  Starting part on Manhattan networks: page 89.
+###########################################################################
+
+

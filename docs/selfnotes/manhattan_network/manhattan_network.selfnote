@@ -1,0 +1,11 @@
+######## Manhattan network: ###################################
+Let T be a set of points.
+A manhattan network on T (called N) is composed of:
+	1 - Vertical and horizontal edges.
+	2 - Any couple of points p and q are linked together.
+		(ie. ∃ a path between p and q, ∀(p and q) With p!=q)
+
+######## Minimal manhattan network: ###########################
+Let N' be a minimal manhattan network,
+	1) N' respect the Manhattan network's properties,
+	2) The sum of the length of all edges is minimal.

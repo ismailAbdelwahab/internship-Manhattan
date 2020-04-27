@@ -1,0 +1,12 @@
+############## Description ##################################
+L1 metric is used to calculate a distance between two points
+It is also known as "L1 norm" or "Manahattan distance".
+
+################# Usage #####################################
+Let A=(xa,xb) and B=(xb,yb) two points.
+The manhattan distance between A and B is:
+     |xa-xb| + |ya-yb|
+with A and B on a vertical or horizontal line.
+
+################# Reference #######################################
+https://iq.opengenus.org/manhattan-distance/

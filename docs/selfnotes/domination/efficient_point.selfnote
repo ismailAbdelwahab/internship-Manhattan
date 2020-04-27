@@ -1,0 +1,8 @@
+Let p be a point.
+p is said to be efficient when:
+	No other point in the set T, dominates it.
+( ie. p is one of the maximum elements
+in the partial order relation ≻ )
+
+Other names of this type of points are:
+	Pareto optimal, non-dominated or non-inferior
