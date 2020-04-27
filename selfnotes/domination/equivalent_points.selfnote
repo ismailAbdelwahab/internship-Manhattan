@@ -1,8 +1,0 @@
-Let A be a set so that: A ⊂ R**m
-Let x and y be two points.
-
-x and y are said to be equivalent if and only if:
-	d(x,a) = d(y,a) ∀a ∈ A.
-
-We note this as: x ≃A y 
-(with A a subscript of the operator)

@@ -1,5 +1,0 @@
-Intervals are defined by :
-	Id(x, y) ={z∈R**m : d(x, z) + d(z, y) = d(x, y)}
-
-Meaning: Id = every point z so that:
- dist x to z PLUS dist z to y IS EQUAL to dist x to y
