@@ -1,6 +1,9 @@
 ### Vim related:
 *.swp
 *.swo
+###Python byte-compiled files
+*/__pycache__/*
+*.pyc
 ### Personal backup files:
 *.BAK
 ### Personal Todo file:

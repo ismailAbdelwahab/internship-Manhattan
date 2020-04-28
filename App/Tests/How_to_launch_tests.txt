@@ -1,0 +1,8 @@
+Due to python imports you will not be able to run the tests from here.
+
+To launch the tests, please go back to the folder:
+	App/
+and use the given script that launches the tests for you:
+	App/launch_tests.sh
+
+Thank you.
