@@ -36,11 +36,11 @@ def main():
     lozengeSet.addPoint(bot)
     lozengeSet.addPoint(right)
     # Dominance ( isDominating )
-    #TODO check if it is possible to have a dominated points
-    assert( middle.isDominating(right,lozengeSet) )
+    # No point can be dominated in our case:
+    assert( not middle.isDominating(right,lozengeSet) )
     assert( not right.isDominating(left,lozengeSet) )
     assert( not right.isDominating(left,lozengeSet) )
-    assert( left.isDominating(right,lozengeSet) )
+    assert( not left.isDominating(right,lozengeSet) )
     # Efficience ( isEfficient )   #TODO: implement that
     assert( middle.isEfficient(lozengeSet) )
     # Equivalence ( isEquivalentTo ) #TODO: implement that

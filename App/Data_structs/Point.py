@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 class Point():
     def __init__(self, x, y):
         self.x = x
@@ -10,8 +9,6 @@ class Point():
         """ Return True if "self" is dominating "other" in "setT". """
         strict_dominance = False
         for point in setT.set:
-            if point == other:#TODO: CHECK if we need to exclude other or not
-                continue # do not compare other with himself.
             selfToPoint = self.l1DistTo(point) 
             otherToPoint = other.l1DistTo( point )
             if selfToPoint < otherToPoint :
