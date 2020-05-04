@@ -8,15 +8,15 @@ function YELLOW(){  echo -e ${YELLOW}${1}${NC} ;}
 
 ################ Functions ####################
 function findAllProject_sFiles(){
-	my_files=$( find . -type f -not -name "*show_me_TODO*" | tr "\n" " ")
+	my_files=$( find . -type f -name "*.py" | tr "\n" " ")
 }
 function catAllTODO(){
 	for filename in ${my_files[@]};do
 		output=$(cat ${filename} | grep TODO)
 		if [ "$output" != "" ];then
-			YELLOW " Todo in file: [${NC}${filename}${YELLOW}]"
+			YELLOW " Todo in file: [ ${NC}${filename}${YELLOW} ]"
 			files_with_todo+=${file}
-			echo "${output}" 
+			echo -e "${output}\n" 
 		fi
 	done
 }
@@ -25,7 +25,7 @@ my_files=()
 files_with_todo=()
 GREEN " **Finding project's files ..."
 findAllProject_sFiles
-GREEN " **Searching for TODO statements ..."
+GREEN " **Searching for TODO statements ...\n"
 catAllTODO
 
 if [ ${#files_with_todo[@]} -eq 0 ]; then

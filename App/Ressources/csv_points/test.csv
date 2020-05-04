@@ -1,0 +1,15 @@
+#Bottom line: respectively p1, p2, p3
+1.5,1
+4,1
+#Mid line: p4, p5
+2,3
+4,3
+5,3
+#Top line: p6, p7
+1.5,7.2
+4,7.2
+#Grid should look like this:
+# p6  p7
+#   p3p4p5
+# p1  p2
+#With pX being the X'th point.
