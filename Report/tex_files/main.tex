@@ -1,0 +1,63 @@
+\documentclass[11pt]{report}
+\setlength\parindent{24pt}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{quoting}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+%--------- Chapter & title spacing ----------------------------
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+% this alters "before" spacing (the second length argument) to 0
+\titlespacing*{\chapter}{0pt}{-40pt}{0pt}
+%------- Quotation spacing ------------------------------
+\quotingsetup{vskip=0pt}
+%------ [sub*]sections spacing ---------------------------
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{3cm}
+
+\iffalse ----------------Title / Author / Date ------------------- \fi
+\title{\textbf{Internship report: \\
+			LIS\\  Minimal Manhattan network}}
+\author{ABDEL WAHAB Ismail}
+\date{17 Avril 2020}
+
+\iffalse ------------------ First Page --------------------------- \fi    
+\usepackage{amsmath}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\renewcommand{\contentsname}{Summary}
+\tableofcontents
+\newpage
+
+\iffalse --------------  Document Content-------------------------- \fi
+
+\input{lis_presentation} % done ??? can be larger !
+
+\input{pb_presentation}
+
+\input{algorithms_used}
+
+\input{data_structs}
+
+\input{acknowledgment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quoting} \begin{verbatim}
+  This is a citation
+\end{verbatim} \end{quoting}
+
+\begin{enumerate}[noitemsep, nolistsep]
+	\item{item1}
+	\item{item 2}
+\end{enumerate} 
+
+\end{document}
