@@ -1,0 +1,15 @@
+\begin{algorithm}[H]
+\SetAlgoLined
+ \caption{Complete grid from a set of Terminals "T"}
+\KwResult{The complete grid of a set of terminals in 2D }
+ lowX = lowest x value of all terminals\;
+ highX = highest x value of all terminals\;
+ lowY = lowest y value of all terminals\;
+ highY = highest y value of all terminals\;
+ completeGrid = [ An empty list of lines ]\;
+ \For{Every terminal t in our set of terminals}{
+ Add to completeGrid the line from (lowX,$y_t$) to (highX,$y_t$)\;
+ Add to completeGrid the line from ($x_t$,lowY) to ($x_t$,highY)\;
+ }
+ return completeGrid\;
+\end{algorithm}

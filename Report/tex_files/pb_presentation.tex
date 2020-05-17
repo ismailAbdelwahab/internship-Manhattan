@@ -1,0 +1,57 @@
+\chapter{Minimal Manhattan networks (MMN)}
+\section{Discoverer of the problem}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Gudmundsson, Levcopoulos and Narasimhan are three scientists that work together in the 90's on a specific topic, Finding a Minimal manhattan network for a given set of terminals. In fact a the time it wasn't know that this problem was actually NP-Hard, and required a lot of calculation to be solved.
+
+This is why after a long work the pionier of the MMN publish two algorithms with factors 4 and 8. Knowing that this problem was bind to be difficult they emmited the conjecture that a factor 2 algorithm must exist.
+
+And it is at this time that they opened the door to a vaste community of researchers to work on this topic and variants of this problem.
+
+But before going deeper into the explanation we need to define the elements that we are going to work on. 
+
+\section{Origins of the topic}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This problem was formulated in 1999 by Gudmundsson, Levcopoulos and Narasimhan whom found two approximating algorithms of factors 4 and 8. 
+
+Moreover they conjectured the existance of an approximating algorithm of factor 2. Which means that this conjectured algorithm could give the solution to our problem with a cost lower than two times the optimal cost to find the optimal solution.
+
+This algorithm was found in 2005 by my internship's mentors alon with K.Nouioua and N.Catusse by using rounding method on a factional optimal solution, and then coupling it with a primal-dual algorithm.
+
+Later other variants of this problem were studied, like for example the generalization of the problem to the normed plane with polygonal balls (in the l1-metric this polygon ball is a lozenge). And for this version of the MMN an algorithm factor 2.5 was found [2].
+
+\section{What is a rounding algorithms}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{A set of terminals to begin with}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+To work on finding a MMN, we have to understand on what data we are searching this network. The objective of such a network is to \textbf{connect each an every possible pairs of points} in a set of points (on the plane in our case).
+
+These points are called \textbf{terminals}.
+
+In fact connecting all possible pairs of terminals given a list of terminals is not difficult at all (for example just create the complete grid of your set of terminals: 
+
+\input{algorithms/complete_grid_manhattan_network}
+
+Here we can see that collecting the minimal(resp. maximal) x(resp. y) is a linear opération and the creation of both lines are also linear operations. In conclusion a simple Manhattan network can be found in O(n).
+
+But here is the trick, what we want is a \textbf{\emph{Minimal}} Manhattan network.
+
+\section{The l1-metric}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We can briefly define  a \textbf{metric} as "\emph{a way to calculate the distance between two points}".
+
+For the sake of simplification I will just present you the l2-metric, which is the one that we use "all days".
+
+The \textbf{l2-metric} also know as the \textbf{Euclidean distance} uses the formula based on the Pyhtagorean theorem:
+	\[d_2(p,q)= d_2(q,p) = ||p - q|| = \sqrt{(x_q-x_p)^2+(y_q-y_p)^2}\]
+	
+And now as simple as it is, the \textbf{l1-metric} is just another way to calculate the distance between two points p and q:
+	\[ d_{1}(p,q)= d_{1}(q,p) = |x_p-x_q|+|y_p-y_q|\]
+
+\section{Introduction to the MMN}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A Minimal Manhattan network has obviously the same properties as a Manhattan network, but we add to them a constraint: the sum of the length of all edges (lines in the network) must be the lowest possible.
+
+It is by using numerous algorithms and data structures that we will ensure that what we create is a real minimal Manhattan network.
+
+This simple constraint will totally change the way we approach the problem and how shall we solve it. By trying to find  a minimal solution we are greatly increasing the complexity of the work that will be needed to answer our question.
+
+\section{Pareto envelopes}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Finding a MMN}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
