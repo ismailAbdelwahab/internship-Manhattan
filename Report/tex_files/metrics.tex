@@ -5,14 +5,15 @@ A metric is a function, more precisely a distance function. It is used to define
 This function takes as input two elements from a set and outputs the distance between them. Of course their are many ways to calculate a distance between two elements based on what you want and what type of data you are working on.
 
 For a classic presentation we will introduce the l2-metric. Later in this report we will use the l1-metric as it is the one that is important for us.
-\section{The l2-metric}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Example of metrics}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The l2-metric}%%%%%%%%%
 For the sake of simplification we will just present you the l2-metric, which is the one that we use in the "all days" world.
 
 In fact, the \textbf{l2-metric} is also know as the \textbf{Euclidean distance} and uses the formula relative to the Pyhtagorean theorem:
 	\[d_2(p,q)= d_2(q,p) = ||p - q|| = \sqrt{(x_q-x_p)^2+(y_q-y_p)^2}\]
 	
 This is the casual way to calculate distances on a map or between points.
-\section{The l1-metric}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The l1-metric}%%%%%%%%%%
 	And now as simple as it is, the \textbf{l1-metric} is just another way to calculate the distance between two points p and q:
 	\[ d_{1}(p,q)= d_{1}(q,p) = |x_p-x_q|+|y_p-y_q|\]
 What is interesting in this metric here, is that we calculate a distance based of the variation of x coordinates and the variation of y coordinates.

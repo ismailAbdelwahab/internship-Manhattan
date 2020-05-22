@@ -1,7 +1,7 @@
 \chapter{Interval with triangular equality}
 Before jumping in and defining what is the Pareto envelope of our set of terminals, or even saying why will we calculated it, we need to define the interval of points that respect the triangular equality.
 
-\section{Triangular equality} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Triangular inequality/equality} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent The Triangula \textbf{in}equality states that:
 \begin{quoting} \begin{verbatim}
   For a triangle the sum of the length of any two sides
@@ -21,7 +21,7 @@ Which means that: let $abc$ be a triangle:
 	\newline
 \end{itemize}
 
-\section{Interval and metric} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Interval and metrics} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	But as we defined previously d(x,y), we know that this notation depends on the metric that we use. Moreover, depending on which metric we use the set of points that will respect the triangular equality will differ. Here are some examples of this set depending on the metric used:
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{img/interval_example.png}
@@ -33,7 +33,7 @@ As you can see on the right, this set is just all the points on a straight line 
 
 Nevertheless, on the left we see that for the l1-metric this interval is a square, with the segment [\emph{x},\emph{y}] being a diagonal of this square. And you can see that after doing the calculation we actually end up with this shape for all points that respect the triangular equality.
 
-\section{Usage of this interval} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Usage of intervals} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Also as we will work a bit with the l1-metric, this result will be really useful for future computations.\newline
 
 All the points that respect the triangular equality can be regrouped in a set. This set will simply be called interval between x and y for the metric $d_1$(resp. $d_{metric\_identifier}$).
@@ -42,7 +42,9 @@ It is base on this interval that we will also define the Pareto envelope of our 
 
 Note: As the construction of the Pareto envelope can be linked to the interval between all pair of points, and as this said interval depends on the metric that we use to calculate distances, \textbf{the Pareto envelope of a set of terminals depends on the metric that we use}.
 
-\section{Notation}
+\section{Used notation}
 By defining this interval we now can have a way to start and work our way to the Pareto envelope of our set. 
 
-\noindent This interval will be noted as: $I_{d_{metric\_identifier}}$
+This interval will be noted as: $I_{d}$.
+
+\noindent With $d$ the identifier of the metric used to calculate this interval.

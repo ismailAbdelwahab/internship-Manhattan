@@ -31,7 +31,7 @@
 \date{17 Avril 2020}
 
 \iffalse ------------------ First Page --------------------------- \fi    
-\usepackage{amsmath}
+\usepackage{amssymb}
 \begin{document}
 \maketitle
 \thispagestyle{empty}
@@ -41,16 +41,19 @@
 
 \iffalse --------------  Document Content-------------------------- \fi
 
+\part{LIS and intership's subject}
 \input{lis_presentation} % done ??? can be larger !
-
 \input{subject_presentation}
 
-\input{terminals}
+\part{Calculate a minimal Manhattan network}
+\input{terminals} % add the fact that domination is a partial order relation
 \input{metrics}
 \input{interval}
-\input{pareto_envelopes} %TODO
+\input{unit_coordinates} %TODO ALGO to convert to unit coords + FINISH IT
+\input{pareto_envelopes} %TODO end of this part
 \input{mmn} %TODO
 
+\part{Internship's proceeding}
 \input{code_strategy}%TODO
 
 \input{acknowledgment}%TODO

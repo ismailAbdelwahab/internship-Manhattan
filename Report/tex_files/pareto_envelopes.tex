@@ -1,1 +1,52 @@
 \chapter{Pareto envelopes}
+
+\section{Definition of Pareto envelopes}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Simple definition}
+	The Pareto envelope of a set of terminals is a structure that is defined by a subset of terminals constructing this set. This subset is formed with only all the non-dominated points in the space.
+	
+\subsection{Remarkable result}
+	If we study the the Pareto envelope and the convex hull(also known as convex envelope) of a cloud of points we see that they coincide but only if we use the euclidean distance (l2-metric).
+	
+	This result is important as it make us understand that \textbf{convex envelopes} and \textbf{Pareto envelopes} are some kind of linked but \textbf{not the same object}.
+	
+\section{Calculation with $I_d$ in $\mathbb{R}^2$}%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{A set of efficient points: $\Upsilon_d$}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Before calculating the Pareto envelope we need to be introduced, referring to a set of terminals, to the set of efficient points that is linked to it.
+	
+	This set is determined by the intervals that we calculated previously. So it is natural that this set is totally depending on the metric we are working with.
+	
+	It is in that matter that we have to know that the Pareto envelope depends also on the metric used to calculate distances. 
+
+\subsection{Construction of $\Upsilon_d$} %%%%%%%%%
+\noindent This set is noted $\Upsilon_d$ and is defined as:
+\begin{equation}
+	\Upsilon_d = \cap^{n}_{i=1}(\cup^{n}_{j=1}I_{d}(t_i,t_j))
+\end{equation}
+
+As you can see the equation 6.1 stipulates that the set of efficient points is defined by the intersection of all intervals from all points to all others. Meaning that $\Upsilon_d$ is defined by the intersection of all intervals with all pairs of points possible.
+
+And it is with this definition that we see that we are getting closer and closer to construct our target, a minimal Manahattan network.
+
+\subsection{$\Upsilon_d$ in $\mathbb{R}^2$}%%%%%%%%%%
+With this tool we can now construct the set of efficient point in our cloud of points in $\mathbb{R}^m$.
+
+As we are for now working a specific space ($\mathbb{R}^2$), we can now specifically construct $\Upsilon_{d_1}$ for the l1-metric and $\Upsilon_{d_{\infty}}$ in the L-infinity metric.
+
+\section{Different behavior in $\mathbb{R}^3$}%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This remark is here for the continuation of this intern ship and will be useful for later. 
+
+We have to be careful when working on higher dimension and to not generalize our result too quickly.
+
+In fact as for $\mathbb{R}^2$, the Pareto envelope is $\Upsilon_{d_1}$ or $\Upsilon_{d_\infty}$ depending on the metric used, it is not the case in $\mathbb{R}^3$.
+
+In $\mathbb{R}^3$ the Pareto envelope is more complex to calculate and moreover differs from $\Upsilon_d$ shall it be with euclidean distances, l1-metric or even l-infinite metric.
+
+As the Pareto envelope is calculated in $O(n log(n))$ in $\mathbb{R}^2$ due to this difference in $\mathbb{R}^3$, the Pareto envelope in $\mathbb{R}^3$ is not that easy to compute.
+
+Again as we are working in $\mathbb{R}^2$ we are going to discover an algorithm designed to calculate the Pareto envelope in such a space in $O(nlog(n))$ as it is the lowest complexity to do so.
+
+\section{Construction of the Pareto envelope with a scanning algorithm}%%%%%%%%%
+\subsection{Subdividing the problem into chains}
+\subsection{Computing the chains}
+\subsection{Scanning algorithm}
+\subsection{Resulting envelope}

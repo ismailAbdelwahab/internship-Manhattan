@@ -1,0 +1,28 @@
+\chapter{Unit coordinates}
+\section{What are unit coordinates}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Granted that we are working in a two dimensional space, all coordinates are more likely to be real numbers than natural numbers.
+	Moreover our system would be useless if we were only working on discrete coordinates where our world and the way we measure distance is not discrete.
+	
+	However we can counter this by having a tool or an algorithm that can convert two dimensional coordinates into discrete coordinates. Unit coordinates are a way to locate points in space with only round numbers.
+	
+	Additionally this will restrict the space we are working on from $\mathbb{R}^2$ to a grid containing all of our terminals.
+	
+	This tool would greatly lower our computation time and will make our future algorithm more easier to implement.
+\section{Why do we use them}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Under those circumstances, as said it make implementation of future algorithm simpler as we are standardizing the way we are talking about coordinates and points. As a result all future algorithm will share the same references to coordinates and it will be simpler to consecutively run algorithms on the same data.
+	
+	Furthermore speaking of data, this will also define the data structure used to store our terminals. In my own implementation terminals in $\mathbb{R}^2$ are read from a CSV file and stored as a list. Just after that I use an algorithm designed by myself to convert those coordinates into unit coordinate. This algorithm will be covered in the next section. 
+\section{Algorithm to switch to unit coordinates}%%%%%%%%%%%%%%%%%%%%
+
+\section{Recovering original coordinates after computations}%%%%%%%%%%
+Despite having unit coordinates making our job easier, we need at the end of all our computation to be able to transition back to the real points in $\mathbb{R}^2$ because otherwise using unit coordinates would not make sens.
+
+For this we created a specific data structure (in my implementation a python dictionary) to link each real point to his unit coordinate translation by our algorithm.\newline
+
+After having found a minimal Manhattan network for our set of unit coordinates points, we will use the fact that in the view of Pareto envelope and Manhattan network (and it has to work for both as the first is used to create the second), unit coordinate is an \textbf{isotone mapping} of our points.
+
+Meaning that for a partial order relation \emph{\textbf{R}}, applying an isotone mapping \textbf{will not} change the order of any elements in \emph{\textbf{R}}.
+
+And as a matter of fact we have to remember ourselves that terminal domination is a partial order relation that is used to define all of the structure we are talking about.
+
+If we keep this relation untouched, we just shown that if we found a MMN for our unit coordinate grid, it is the same thing than finding a MMN for the set for terminals in $\mathbb{R}^2$. We will just have to convert our point back to what they were in $\mathbb{R}^2$.
