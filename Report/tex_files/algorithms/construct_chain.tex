@@ -1,0 +1,21 @@
+\begin{algorithm}[H]
+\SetAlgoLined
+ \caption{Compute chain S1}
+\KwResult{The S1 chain from a could of terminals "T"}
+ Sort the terminals by decreasing ordinate and increasing abscissa.\;
+ Let T be the set of terminals.( T = [$t_0$, $t_1$, ..., $t_{n-1}$])\;
+ S1 = \o\;
+ previous = $t_0$\;
+ \For{i=2 to (n-1)}{
+ 	\uIf{$x_{t_i} > x_{previous}$ AND $y_{t_i} == y_{previous}$}{
+ 		$ S1 = S1 \cup [previous, t_i]$\;
+ 		$previous = t_i$\;
+ 	}
+ 	\uIf{$x_{t_i} > x_{previous}$ and $y_{t_i} > y_{previous}$}{
+ 		temp = ($x_{previous},y_{t_i}$)
+ 		$S1 = S1 \cup [previous,temp] \cup [temp,t_i]$\;
+ 		$previous = t_i$\;
+ 	}
+ }
+ return S1\;
+\end{algorithm}

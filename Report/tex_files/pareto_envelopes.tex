@@ -46,7 +46,43 @@ As the Pareto envelope is calculated in $O(n log(n))$ in $\mathbb{R}^2$ due to t
 Again as we are working in $\mathbb{R}^2$ we are going to discover an algorithm designed to calculate the Pareto envelope in such a space in $O(nlog(n))$ as it is the lowest complexity to do so.
 
 \section{Construction of the Pareto envelope with a scanning algorithm}%%%%%%%%%
-\subsection{Subdividing the problem into chains}
+\subsection{Dividing the problem into chains}
+The easiest way to construct the Pareto envelope is to divide the problem into four chains. For that we will construct the chains $S1$,$S2$,$S3$,$S4$. Clockwise the chains are built in this manner:
+\begin{itemize}[noitemsep, nolistsep]
+	\item{$S1$ - North to East}
+	\item{$S2$ - East to South}
+	\item{$S3$ - South to West}
+	\item{$S4$ - West to North}
+\end{itemize}
+
+After computing all four chains, concatenate them in the right order $S1 -> S4$ and this data structure will represent the Pareto envelope. 
+
 \subsection{Computing the chains}
-\subsection{Scanning algorithm}
-\subsection{Resulting envelope}
+Here is an algorithm to calculate the first of the four chains.
+
+\input{algorithms/construct_chain.tex}
+
+Here S1 is a list of points, these points represent the "breaking points" along the chain. Drawing this chain can be done by drawing a line from a point to his successor in the list.\newline
+
+\textbf{Remark:} The construction of S2,S3 and S4 is done in the same way, the only thing to change are:
+\begin{enumerate}[noitemsep, nolistsep]
+	\item{The sort applied to T.}
+	\item{The conditions in the two "if" statements.}
+	\item{The name of the returned variable.}
+\end{enumerate}
+
+\subsection{Complexity}
+Despite doing this algorithm four time, the overall complexity (construction of the four chains) is $O(nlog(n))$.\newline
+
+The first step in this algorithm, is to sort the points. Obviously we use an $O(nlog(n))$ algorithm for that as it is the quickest way to do so.
+
+All other instruction are made in linear time. We only insert points into a list which is a linear timely done and verify condition (also in linear time).
+\begin{itemize}[noitemsep, nolistsep]
+	\item{Line 1 // Sorting the terminals // $O(nlog(n))$}
+	\item{Line 2 to 4 // Initialization // $O(1)$}
+	\item{Line 5 to 13 // For loop // $O(n)$}
+\end{itemize}
+
+\noindent The complexity of this algorithm is:
+
+$O(nlog(n)) * O(1) * O(n) = O(nlog(n))$
