@@ -63,5 +63,3 @@ else
 	done
 	echo ""
 fi
-
-

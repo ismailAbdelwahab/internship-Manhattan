@@ -3,6 +3,7 @@ from sys import argv, exit
 
 from ErrorHandlers.ErrorHandler import throwError
 from ErrorHandlers.ArgumentLineHandler import checkArgumentLine
+
 from Data_structs.Point import Point
 from Data_structs.SetT import SetT
 from Parser.CSVParser import CSVParser
@@ -16,13 +17,6 @@ def main():
 
     print(terms) # ==> extracted SetT from CSV file
 
-# General plan for the main:
-    # 1) Read csv file
-    #   -> store points's data
-    # 2) Compute data if needed
-    # 3) Calculate Pareto envelope
-    # 4) Strips and staircases
-    # 5) Use algo from [5]
 
 if __name__ == '__main__':
     checkArgumentLine()

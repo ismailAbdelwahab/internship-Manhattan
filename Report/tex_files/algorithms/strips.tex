@@ -1,0 +1,23 @@
+\begin{algorithm}[H]
+\SetAlgoLined
+ \caption{LocateStrip}
+\KwResult{HS and VS as lists of tuples. (respectively horizontal strips and vertical strips}
+ HS = \o\;
+ VS = \o\;
+ Calculate $O_i$ and $A_i$ $|$ $ \forall i \in [1,4]$\;
+ \For{i=1 to n}{
+ 	\uIf{$t_i = O_3(O_1(t_i))$}{
+ 		$HS = HS\cup (t_i,O_1(t_i))$\;
+	}
+ 	\uIf{$t_i = O_4(O_2(t_i))$}{
+ 		$HS = HS\cup (t_i,O_2(t_i))$\;
+ 	}
+ 	\uIf{$t_i = A_3(A_1(t_i))$}{
+ 		$VS = VS\cup (t_i,A_1(t_i))$\;
+ 	}
+ 	\uIf{$t_i = A_4(A_2(t_i))$}{
+ 		$VS = VS\cup (t_i,A_2(t_i))$\;
+ 	}
+ }
+ return HS and VS\;
+\end{algorithm}
