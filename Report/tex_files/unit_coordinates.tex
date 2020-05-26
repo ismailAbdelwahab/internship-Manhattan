@@ -1,7 +1,7 @@
 \chapter{Unit coordinates}
 \section{What are unit coordinates}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	Granted that we are working in a two dimensional space, all coordinates are more likely to be real numbers than natural numbers.
-	Moreover our system would be useless if we were only working on discrete coordinates where our world and the way we measure distance is not discrete.
+	Moreover our system would be useless if we were only working on discrete coordinates, where our world and the way we measure distance is not discrete.
 	
 	However we can counter this by having a tool or an algorithm that can convert two dimensional coordinates into discrete coordinates. Unit coordinates are a way to locate points in space with only round numbers.
 	
@@ -11,8 +11,7 @@
 \section{Why do we use them}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	Under those circumstances, as said it make implementation of future algorithm simpler as we are standardizing the way we are talking about coordinates and points. As a result all future algorithm will share the same references to coordinates and it will be simpler to consecutively run algorithms on the same data.
 	
-	Furthermore speaking of data, this will also define the data structure used to store our terminals. In my own implementation terminals in $\mathbb{R}^2$ are read from a CSV file and stored as a list. Just after that I use an algorithm designed by myself to convert those coordinates into unit coordinate. This algorithm will be covered in the next section. 
-\section{Algorithm to switch to unit coordinates}%%%%%%%%%%%%%%%%%%%%
+	Furthermore speaking of data, this will also define the data structure used to store our terminals. In my own implementation terminals in $\mathbb{R}^2$ are read from a CSV file and stored as a list. Just after that I use an algorithm designed by myself to convert those real coordinates into unit coordinate.
 
 \section{Recovering original coordinates after computations}%%%%%%%%%%
 Despite having unit coordinates making our job easier, we need at the end of all our computation to be able to transition back to the real points in $\mathbb{R}^2$ because otherwise using unit coordinates would not make sens.

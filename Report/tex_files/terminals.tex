@@ -22,13 +22,13 @@ Let \emph{p} and \emph{q} be two terminals of T.
 	\item{$\forall t \in T : d(p,t) \leq d(q,t)$}
 	\item{$\exists t' \in T : d(p,t) < d(q,t)$}
 \end{enumerate} 
-With d(p,t) the distance between \emph{p} and \emph{t}, that is calculated based on the metric that we use. The next whole chapter is dedicated to, and will explain, metrics and how do we calculated distances.
+With d(p,t) the distance between \emph{p} and \emph{t}, that is calculated based on the metric that we use. The next whole chapter is dedicated to, and will explain, metrics and how do we calculate distances.
 
 In this definition we need to note that no point can be dominated. As for all \emph{t} in T d(p,t) must be lower or equal to d(q,t), (of course we take in consideration that \emph{p} and \emph{q} are different points) then \emph{t} could be \emph{q}. In this case then it is impossible to have $d(p,q)\leq d(q,q)$.
 
 In any case if a terminal \emph{p} dominates another terminal \emph{q} we denote this property by: $ p \succ q $\newline
 
-Moreover domination is a partial order relation, this property will be used later as we will need to treat simplified data but equivalent to our original cloud of terminals in order to make computation faster (this simplification is covered in the unit coordinate chapter).
+Moreover domination is a partial order relation, this property will be used later as we will need it to treat simplified data but equivalent to our original cloud of terminals in order to make computation faster (this simplification is covered in the unit coordinate chapter).
 \subsection{Efficiency}%%%%%%%%%%%%%%%%
 A point \emph{p} is said to be efficient if $\neg\exists q$ and \emph{q} dominates \emph{p}. In other words: a terminal is said efficient if no other terminal is dominating it.
 
