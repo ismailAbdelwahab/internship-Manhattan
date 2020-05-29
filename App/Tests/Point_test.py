@@ -41,9 +41,11 @@ def main():
     assert( not right.isDominating(left,lozengeSet) )
     assert( not right.isDominating(left,lozengeSet) )
     assert( not left.isDominating(right,lozengeSet) )
-    # Efficience ( isEfficient )   #TODO: implement that
+    # Efficience ( isEfficient )  
     assert( middle.isEfficient(lozengeSet) )
-    # Equivalence ( isEquivalentTo ) #TODO: implement that
+    # Equivalence ( isEquivalentTo )
+    assert( not left.isEquivalentTo(right, lozengeSet) )
+    assert( left.isEquivalentTo(left, lozengeSet) )
 
 if __name__ == '__main__':
     main()

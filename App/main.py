@@ -6,6 +6,7 @@ from ErrorHandlers.ArgumentLineHandler import checkArgumentLine
 
 from Data_structs.Point import Point
 from Data_structs.SetT import SetT
+from Data_structs.GridT import GridT
 from Parser.CSVParser import CSVParser
 ######################## Main #######################################
 def main():
@@ -16,7 +17,10 @@ def main():
         throwError("The specified file does not exist.", 3, False) 
 
     print(terms) # ==> extracted SetT from CSV file
-
+    gridT = GridT( terms )
+    correspondanceTable = gridT.correspondanceTable
+    print("correspondanceTable:")
+    print( correspondanceTable )
 
 if __name__ == '__main__':
     checkArgumentLine()

@@ -23,7 +23,7 @@ class Point():
     def isEfficient(self, setT):
         """ Return True if no point in setT is dominating self """
         for point in setT.set:
-            if point == self:#TODO: check exclusion
+            if point == self:
                continue
             if point.isDominating( self, setT ):
                 return False
@@ -31,9 +31,9 @@ class Point():
 #################### Equivalence of points #########################
     def isEquivalentTo(self, other, setT):
         """ Return True if self.d(p) == other.d(p) for all p in setT """
-        for point in setT.set:#TODO: check exclusion
-            if point == self or point == other:
-                continue
+        if self == other:
+            return True;
+        for point in setT.set:
             if self.l1DistTo( point ) != other.l1DistTo( point ):
                 return False
         return True
@@ -51,3 +51,6 @@ class Point():
         return "Point:({},{})".format(self.x, self.y)
     def __str__(self):
         return "({},{})".format(self.x, self.y)
+######################## Hash ######################################
+    def __hash__(self):
+        return hash(repr(self))
