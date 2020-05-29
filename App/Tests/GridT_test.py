@@ -17,15 +17,12 @@ p7 = Point(4,7.2)
 
 def getSetT():
     test_file = "Ressources/csv_points/test.csv"
-    #try:
     terms = CSVParser.createSetTFromFile( test_file )
-    #except FileNotFoundError:
-    #    throwError("Missing test file! [{}].".format(test_file), 1, False)
     return terms
 
 def main():
     terms = getSetT()
-    grid = GridT()
+    grid = GridT( terms )
     grid.computeGrid( terms )
     print("terms ==>" + str(terms) )
     #Check if we properly create the grid:
