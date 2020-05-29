@@ -18,16 +18,18 @@ class SetT():
         print("Point "+str(p)+" not found in set, cannot remove it.")
 ########################### Sort set #################################
     def sortByX(self):
-        self.set.sort( key = lambda point : point.x)
+        self.set.sort( key = lambda point : point.x )
+    def sortIncXDescY(self): #TODO implement this function
+        pass
     def sortByY(self):
-        self.set.sort( key = lambda point : point.y)
-####################### Copy + str + repr ############################
+        self.set.sort( key = lambda point : point.y )
+####################### Copy  ########################################
     def copy(self):
         copy = SetT()
         for point in self.set:
             copy.addPoint( point )
         return copy
-
+#################### eq + repr + str ################################# 
     def __eq__(self, other):
         return self.set == other.set and self.nbPoints == other.nbPoints
     
