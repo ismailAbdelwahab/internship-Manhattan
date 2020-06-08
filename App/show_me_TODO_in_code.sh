@@ -14,12 +14,13 @@ function catAllTODO(){
 	for filename in ${my_files[@]};do
 		output=$(cat ${filename} | grep TODO)
 		if [ "$output" != "" ];then
-			YELLOW " Todo in file: [ ${NC}${filename}${YELLOW} ]"
 			files_with_todo+=${file}
+			YELLOW " Todo in file: [ ${NC}${filename}${YELLOW} ]"
 			echo -e "${output}\n" 
 		fi
 	done
 }
+
 ################ Script ############################
 my_files=()
 files_with_todo=()
@@ -34,4 +35,3 @@ if [ ${#files_with_todo[@]} -eq 0 ]; then
 else
 	GREEN " **You can now see that you have work todo :)"
 fi
-

@@ -1,34 +1,30 @@
 #!/bin/bash
-
 ###############  Colors  #################################
 RED=`tput bold && tput setaf 1`
 GREEN=`tput bold && tput setaf 2`
 YELLOW=`tput bold && tput setaf 3`
 NC=`tput sgr0`
-function RED(){
-        echo -e ${RED}${1}${NC} 
-}
-function GREEN(){
-        echo -e ${GREEN}${1}${NC}
-}
-function YELLOW(){
-        echo -e ${YELLOW}${1}${NC}
-}
+function RED(){ echo -e ${RED}${1}${NC}; }
+function GREEN(){ echo -e ${GREEN}${1}${NC}; }
+function YELLOW(){ echo -e ${YELLOW}${1}${NC}; }
+
 ############### Test management ##########################
 function findFilesToTest(){
 	for file in Tests/*.py; do
 		file_sub_name=${file:6:-8}
-		if [ ${file_sub_name} != "__i" ]; then
+		if [ ${file_sub_name} != "__i" ]; then # All files besides "__init.py__"
 			files_to_test+=( ${file_sub_name} )
 		fi
 	done
 }
-function testFile(){
+function launchTests(){
+for file in ${files_to_test[@]}; do
+	testFile ${file}
+done
+}
+function testFile(){ #Argument: [$1:name of the file to test]
 	YELLOW " **Executing test for: $1"
 	output=$(python -m Tests.$1_test)
-	checkSuccess $1
-}
-function checkSuccess(){
 	if [ $? -eq 0 ]; then
 		GREEN "\tSuccess"
 	else
@@ -38,21 +34,19 @@ function checkSuccess(){
 }
 
 ################## Script ################################
-## Array of file on which we failed a test:
+## Init arrays
 failed_tests=()
-
-## Array of files to test:
 files_to_test=()
-## Fill the array:
-findFilesToTest
 
+## Fill files_to_test:
+GREEN "Finding all test files ..."
+findFilesToTest
+GREEN "Done."
 ## Launch the tests
 GREEN "Launching tests ..."
-for file in ${files_to_test[@]}; do
-	testFile ${file}
-done
+launchTests
 
-###### Print the files that did not pass the tests #######
+##################### Final output ######################
 if [ ${#failed_tests[@]} -eq 0 ]; then
 	GREEN "All tests were done, no errors detected."
 else
