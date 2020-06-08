@@ -12,8 +12,6 @@ class GridT():
         for point in terms.set:
             self.insertPointInTPal1( point )
             self.insertPointInTPal2( point )
-        print("Tpal1 ==> " +str(self.Tpal1) )
-        print("Tpal2 ==> " +str(self.Tpal2) )
         self.fillCorrespodanceTable()
         return self.correspondanceTable
 
