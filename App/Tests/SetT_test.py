@@ -16,22 +16,22 @@ def main():
     assert( str(terms) == "[(3,2), (26,1), (18,2), (5,7)]" )
     assert( terms.nbPoints == 4 )
 
-    ##### Removing elements ( removePoint() )
+    ##### Removing elements ( removePoint() ) ##############################"
     terms.removePoint( Point(26,1) )
     assert( str(terms) == "[(3,2), (18,2), (5,7)]" )
     assert( terms.nbPoints == 3)
     # Unexisting point removed does not change anything.
     terms.removePoint( Point(1000,1000) )
+    assert( terms.nbPoints == 3 )
     assert( str(terms) == "[(3,2), (18,2), (5,7)]" )
-    assert( terms.nbPoints == 3)
 
-    ##### Copy a SetT ( copy() )
+    ##### Copy a SetT ( copy() ) ###############
     myCopy = terms.copy()
     assert( myCopy == terms )
     myCopy.removePoint( Point(3,2) )
     assert( myCopy != terms )
 
-    ##### Sorting
+    ##### Sorting ##############################
     terms.addPoint( Point(2,2) )
     terms.addPoint( Point(27,9) )
     terms.addPoint( Point(36,2) )
@@ -41,7 +41,15 @@ def main():
     # Sort by Y then by X
     terms.sortByY()
     assert( str(terms) == "[(2,2), (3,2), (18,2), (36,2), (5,7), (27,9)]" )
-
+    # Sort by Decreasing X and then Decreasing Y:
+    terms.sortDecXDecY()
+    assert( str(terms) == "[(36,2), (27,9), (18,2), (5,7), (3,2), (2,2)]" )
+    #
+    terms.sortDecYIncX()
+    assert( str(terms) == "[(27,9), (5,7), (2,2), (3,2), (18,2), (36,2)]")
+    #
+    terms.sortIncYDecX()
+    assert( str(terms) == "[(36,2), (18,2), (3,2), (2,2), (5,7), (27,9)]")
 
 if __name__ == '__main__':
     main()
