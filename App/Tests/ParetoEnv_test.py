@@ -33,12 +33,31 @@ def main():
     expectedChain4 = [p1, p6]
 
     expectedParetoEnv = [p6, p7, p4, p5, p4, p2, p1]
-    #Check the creation of Si for i in (1..4)
-    assert( cmp(pareto.chain1, expectedChain1))
-    assert( cmp(pareto.chain2, expectedChain2))
-    assert( cmp(pareto.chain3, expectedChain3))
-    assert( cmp(pareto.chain4, expectedChain4))
+####################################################
+    print(" =====Comparing chains...")
+    print("Chain 1  is: "+ str(pareto.chain1))
+    print("Expected is: "+ str(expectedChain1))
+    print("-------")
+    print("Chain 2  is: "+ str(pareto.chain2))
+    print("Expected is: "+ str(expectedChain2))
+    print("-------")
+    print("Chain 3  is: "+ str(pareto.chain3))
+    print("Expected is: "+ str(expectedChain3))
+    print("-------")
+    print("Chain 4  is: "+ str(pareto.chain4))
+    print("Expected is: "+ str(expectedChain4))
+    print("")
+    print("PartoEnv is: "+ str(pareto.paretoEnv))
+    print("Expected is: "+ str(expectedParetoEnv))
+    print("")
+    
+    assert( str(pareto.chain1) == str(expectedChain1) ) 
+    assert( str(pareto.chain2) == str(expectedChain2) ) 
+    assert( str(pareto.chain3) == str(expectedChain3) ) 
+    assert( str(pareto.chain4) == str(expectedChain4) ) 
+    print(" =====Comparing Pareto Envelope...")
+    assert( str(pareto.paretoEnv) == str(expectedParetoEnv) )
 
-    assert( cmp(pareto.paretoEnv, expectedParetoEnv))
 if __name__ == '__main__':
-	main()
+    main()
+    print(" ===== Tests passed =====")

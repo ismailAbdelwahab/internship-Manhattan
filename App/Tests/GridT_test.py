@@ -40,12 +40,6 @@ def main():
     assert( cmp(grid.Tpal2[0], [p1, p2]) )
     assert( cmp(grid.Tpal2[1], [p3, p4, p5]) )
     assert( cmp(grid.Tpal2[2], [p6, p7]) )
-    
-    #Check the creation of Si for i in (1..4)
-    assert(True)
-    assert(True)
-    assert(True)
-    assert(True)
 
 if __name__ == '__main__':
 	main()
