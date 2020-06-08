@@ -16,7 +16,7 @@ class ParetoEnv():
         self.paretoEnv = []
 ##################### Chains construction ########################################
     def constructChain1(self): # North to East
-    	self.terms.sortDecYIncX()
+        self.terms.sortDecYIncX()
     	previous = self.terms.set[0]
     	self.chain1.append( previous )
     	for i in range(1, len(self.terms.set)):
@@ -33,10 +33,10 @@ class ParetoEnv():
     	previous = self.terms.set[0]
     	self.chain2.append( previous )
     	for i in range(1, len(self.terms.set)):
-    		if self.terms.set[i].x < previous.x and self.terms.set[i].y == previous.y:
+    		if self.terms.set[i].y < previous.y and self.terms.set[i].x == previous.x:
     			self.chain2.append( self.terms.set[i] )
     			previous = self.terms.set[i]
-    		elif self.terms.set[i].x < previous.x and self.terms.set[i].y < previous.y:
+    		elif self.terms.set[i].y < previous.y and self.terms.set[i].x < previous.x: 
     			temp = Point(self.terms.set[i].x, previous.y)
     			self.chain2 += [temp, self.terms.set[i]]
     			previous = self.terms.set[i]
@@ -59,10 +59,10 @@ class ParetoEnv():
     	previous = self.terms.set[0]
     	self.chain4.append( previous )
     	for i in range(1, len(self.terms.set)):
-	    	if self.terms.set[i].x > previous.x and self.terms.set[i].y == previous.y:
+	    	if self.terms.set[i].y > previous.y and self.terms.set[i].x == previous.x:
 	    		self.chain4.append( self.terms.set[i] )
 	    		previous = self.terms.set[i]
-	    	elif self.terms.set[i].x > previous.x and self.terms.set[i].y > previous.y:
+	    	elif self.terms.set[i].y > previous.y and self.terms.set[i].x > previous.x:
 	    		temp = Point(self.terms.set[i].x, previous.y)
 	    		self.chain4 += [temp, self.terms.set[i]]
 	    		previous = self.terms.set[i]

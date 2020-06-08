@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 class SetT():
     def __init__(self):
         self.set = []
@@ -19,10 +18,23 @@ class SetT():
 ########################### Sort set #################################
     def sortByX(self):
         self.set.sort( key = lambda point : point.x )
-    def sortIncXDescY(self): #TODO implement this function
-        pass
     def sortByY(self):
         self.set.sort( key = lambda point : point.y )
+
+    def sortIncXIncY(self):
+        self.sortByY()
+        self.sortByX()
+    def sortDecXDecY(self):
+        self.set.sort( key = lambda point: point.y, reverse = True )
+        self.set.sort( key = lambda point: point.x, reverse = True )
+
+    def sortDecYIncX(self):
+        self.set.sort( key = lambda point:  point.x )
+        self.set.sort( key = lambda point:  point.y, reverse = True )
+    def sortIncYDecX(self):
+        self.set.sort( key = lambda point:  point.x, reverse = True )
+        self.set.sort( key = lambda point:  point.y )
+
 ####################### Copy  ########################################
     def copy(self):
         copy = SetT()
