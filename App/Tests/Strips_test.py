@@ -2,7 +2,6 @@
 from Parser.CSVParser import CSVParser
 
 from Data_structs.Point import Point
-from Data_structs.SetT import SetT
 from Data_structs.OiAi import OiAi
 from Data_structs.Strips import Strips
 
@@ -29,7 +28,7 @@ def main():
 
 ############ Tests ##################
     # Horizontal and Vertical strips
-    OiAi.computeDictionaries()
+    strips.computeStrips() #TODO: implement this function
     assert( str(strips.HS) == str(expectedHS) )
     assert( str(strips.VS) == str(expectedVS) )
 
