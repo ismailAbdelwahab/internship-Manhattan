@@ -49,10 +49,10 @@ class Point():
     def __ne__(self, other):
         return self.x != other.x or self.y != other.y
 ######################## str + repr ################################
-    def __repr__(self):
-        return "Point:({},{})".format(self.x, self.y)
     def __str__(self):
         return "({},{})".format(self.x, self.y)
+    def __repr__(self):
+        return self.__str__()
 ######################## Hash ######################################
     def __hash__(self):
         return hash(repr(self))
