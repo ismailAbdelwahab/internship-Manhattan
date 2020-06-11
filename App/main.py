@@ -10,6 +10,7 @@ from Data_structs.SetT import SetT
 from Data_structs.GridT import GridT
 from Data_structs.ParetoEnv import ParetoEnv
 from Data_structs.OiAi import OiAi
+from Data_structs.Strips import Strips
 ######################## Main #######################################
 def main():
     print("\t[1] Extracting data from CSV file:" )
@@ -46,6 +47,12 @@ def main():
     print("A2 : " + str(oiAi.A2) )
     print("A3 : " + str(oiAi.A3) )
     print("A4 : " + str(oiAi.A4) )
+
+    print("\t[5] Locating strips:")
+    strips = Strips(terms, oiAi)
+    strips.computeStrips()
+    print("Horizontal strips: " + str(strips.HS) )
+    print("Vertical strips  : " + str(strips.VS) )
 
 if __name__ == '__main__':
     checkArgumentLine()
