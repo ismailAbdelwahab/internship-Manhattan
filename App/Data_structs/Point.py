@@ -43,6 +43,8 @@ class Point():
         return abs(self.x - other.x) + abs(self.y - other.y) 
 ################## Object comparaison ##############################    
     def __eq__(self, other):
+        if other is None:
+            return False
         return self.x == other.x and self.y == other.y
     def __ne__(self, other):
         return self.x != other.x or self.y != other.y
